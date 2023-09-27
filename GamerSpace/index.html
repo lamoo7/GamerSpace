@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerSpace</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js"></script>
+    <script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>GamerSpace</h1>
+            <div class="flex">
+                <button class="links" id="openLoginButton" hx-get="auth/login/login-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Log In</button>
+                <button class="links" id="openSignupButton" hx-get="auth/register/signup-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Sign Up</button>
+            </div>
+        </header>
+        <div class="circle">
+            <div class="bar" style="margin-top: 0; --i: 0.125%;"></div>
+            <div class="bar" style="--i: 1%;"></div>
+            <div class="bar" style="--i: 8%;"></div>
+            <div class="bar" style="--i: 15%;"></div>
+            <div class="bar" style="--i: 22%;"></div>
+            <div class="bar" style="--i: 29%;"></div>
+            <div class="bar" style="--i: 36%;"></div>
+            <div class="bar" style="--i: 43%;"></div>
+            <div class="bar" style="--i: 50%;"></div>
+            <div class="bar" style="--i: 57%;"></div>
+            <div class="bar" style="--i: 64%;"></div>
+            <div class="bar" style="--i: 71%;"></div>
+            <div class="bar" style="--i: 78%;"></div>
+            <div class="bar" style="--i: 85%;"></div>
+            <div class="bar" style="--i: 92%;"></div>
+            <div class="bar" style="--i: 99%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+        </div>
+        <div id="clipped1"></div>
+        <h2>Imagine a place where you <br> can meet <span>gamers</span> just like <span>you</span></h2>
+    </main>
+
+    <section id="first">
+        <h3 style="--delay: 11">Find <span>new friends</span> with ease</h3>
+        <h3 style="--delay: 22">Discover <span>like-minded</span> gamers</h3>
+        <h3 style="--delay: 33">Join or create <span>gaming groups</span> to enhance your <span>multiplayer</span> experiences</h3>
+        <h3 style="--delay: 44">Collaborate on <span>exciting gaming projects</span> or team up for <span>tournaments</span></h3>
+    
+        <div style="display: flex; justify-content: space-evenly; margin-top: 5em;">
+            <div class="card">
+                <div class="banner" style="background-image: url('images/backgrounds/background1.jpg');">
+                    <img src="images/people/person1.jpg">
+                </div>
+                <h2 class="name">Sarah488 <i class="fa-regular fa-circle-check"></i></h2>
+                <div class="title">Minecraft, Terraria and indie games.</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-steam"></i>
+                        <p>Sarahh970</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-reddit"></i>
+                        <p>SarahOnReddit</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-xbox"></i>
+                        <p>TheNaughtyPirateGamer</p>
+                    </li>                    
+                    <li>
+                        <i class="fa-brands fa-discord"></i>
+                        <p>Sarah</p>
+                    </li>
+                </ul>
+            
+                <div class="flex">
+                    <img src="images/games/Terraria.png" alt="">
+                    <img src="images/games/Minecraft.png" alt="">
+                    <img src="images/games/Fall Guys.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="banner" style="background-image: url('images/backgrounds/background2.jpg');">
+                    <img src="images/people/person2.jpg">
+                </div>
+                <h2 class="name">lamoo7 <i class="fa-regular fa-circle-check"></i></h2>
+                <div class="title">League of Legends, EUNE, Emerald 4, Garen and Amumu main</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-discord"></i>
+                        <p>lamoo7</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-steam"></i>
+                        <p>lamoo77</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-twitch"></i>
+                        <p>lamoo7</p>
+                    <li>
+                        <i class="fa-brands fa-reddit"></i>
+                        <p>Garen Main 42069</p>
+                    </li>
+                </ul>
+            
+                <div class="flex">
+                    <img src="images/games/League of Legends.png" alt="">
+                    <img src="images/games/Euro Truck Simulator 2.png" alt="">
+                    <img src="images/games/DOTA 2.png" alt="">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="banner" style="background-image: url('images/backgrounds/background3.jpg');">
+                    <img src="images/people/person3.jpg">
+                </div>
+                <h2 class="name">QuantumNova <i class="fa-regular fa-circle-check"></i></h2>
+                <div class="title">Exploring digital worlds, one pixelated step at a time.</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-discord"></i>
+                        <p>QuantumNova1</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-steam"></i>
+                        <p>QuantumNova</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-reddit"></i>
+                        <p>QuantumNova</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-twitch"></i>
+                        <p>QuantumNova13</p>
+                    </li>
+                </ul>
+            
+                <div class="flex">
+                    <img src="images/games/Counter Strike Global Offensive.png" alt="">
+                    <img src="images/games/Fall Guys.png" alt="">
+                    <img src="images/games/Speedrunners.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="flex" style="justify-content: center;">
+            <h6><i class="fa-regular fa-circle-check" style="color: #71C562;"></i> Subscribe to <span style="background-color: #71C562; border-radius: 0.3em; color: #dcddde; padding: 2px 4px;">PRO</span> membership and have a chance to become <span>listed</span></h6>
+        </div>
+    </section>
+
+    <div id="padding-block"></div>
+
+    <div id="register-div">
+        <button class="register" id="openRegistrationButton" hx-get="auth/register/signup-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Register Now</button>
+    </div>
+    
+    <section id="second">
+        <div style="display: flex; justify-content: space-evenly; align-items: center;">
+            <div>
+                <h3>Create your own <span>profile</span></h3>
+                <h3>Select the <span>games</span> you <span>play</span></h3>
+                <h3>Make <span>friends</span> in an <span>easier</span> way</h3>
+            </div>
+            <div class="card">
+                <div class="banner">
+                    <img src="images/people/user.png">
+                </div>
+                <h2 class="name">Your Username</h2>
+                <div class="title">Insert a description...</div>
+                <ul>
+                    <li>
+                        <i class="fa-brands fa-discord"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-steam"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-twitch"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-reddit"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-xbox"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-playstation"></i>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-teamspeak"></i>
+                    </li>
+                </ul>
+            
+                <div class="flex">
+                    <div style="height: 50px; width: 50px; background-color: #71C562; border-radius: 50%; margin: 1em;"></div>
+                    <div style="height: 50px; width: 50px; background-color: #71C562; border-radius: 50%; margin: 1em;"></div>
+                    <div style="height: 50px; width: 50px; background-color: #71C562; border-radius: 50%; margin: 1em;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="clipped2-parent">
+        <div id="clipped2"></div>
+    </div>
+
+    <section id="third">
+        <h3>Select the <span>games</span> you <span>play</span></h3>
+
+        <br>
+
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Type here what game you love the most. Example: League of Legends, Counter Strike, Minecraft..."
+                hx-trigger="input delay:1s" hx-put="render/paragraph" hx-target="#paragraph" hx-swap="innerHTML">
+            <div id="suggestions" class="suggestions">
+                <div id="mini-loader"></div>
+            </div>
+        </div>    
+
+        <h3>You and other <span>???</span> people play <span id="paragraph">???</span></h3>
+
+        <h6><i class="fa-solid fa-circle-info" style="color: #71c562;"></i>&nbspDon't see the <span>game</span> you play? Submit it <a href="#">here</a></h6>
+    </section>
+
+    <div id="clipped3-parent">
+        <div id="clipped3"></div>
+    </div>
+
+    <section id="fourth">
+        <div id="inset-element">
+            <div>
+                <h3><span>Chat </span> with gamers just like <span>you</span></h3>
+                <h3>Meet <span>people</span> while playing <span>games</span></h3>
+                <h3>Engage in <span>gaming communities</span></h3>
+            </div>
+
+            <div id="chat">
+                <p>Hi! Wanna play something?</p>
+                <p>Yeah, lets hop on DBD</p>
+                <p>Sure thing! </p>
+                <p>;D</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fifth">
+        <h1>Ready to start your journey?</h1>
+        <div class="flex">
+            <button class="links" id="openLoginButton" hx-get="auth/login/login-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Log In</button>
+            <button class="links" id="openSignupButton" hx-get="auth/register/signup-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Sign Up</button>
+        </div>
+
+        <div class="circle">
+            <div class="bar" style="margin-top: 0; --i: 0.125%;"></div>
+            <div class="bar" style="--i: 1%;"></div>
+            <div class="bar" style="--i: 8%;"></div>
+            <div class="bar" style="--i: 15%;"></div>
+            <div class="bar" style="--i: 22%;"></div>
+            <div class="bar" style="--i: 29%;"></div>
+            <div class="bar" style="--i: 36%;"></div>
+            <div class="bar" style="--i: 43%;"></div>
+            <div class="bar" style="--i: 50%;"></div>
+            <div class="bar" style="--i: 57%;"></div>
+            <div class="bar" style="--i: 64%;"></div>
+            <div class="bar" style="--i: 71%;"></div>
+            <div class="bar" style="--i: 78%;"></div>
+            <div class="bar" style="--i: 85%;"></div>
+            <div class="bar" style="--i: 92%;"></div>
+            <div class="bar" style="--i: 99%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+            <div class="bar" style="--i: 100%;"></div>
+        </div>
+    </section>
+    
+    <footer>
+        <h1><span>GamerSpace</span></h1>
+
+        <br><hr><br>
+
+        <div class="grid">
+            <div class="flex-column">
+                <p>Product</p>
+                <a href="#">Support</a>
+                <a href="#">About</a>
+                <a href="#">Status</a>
+            </div>
+            <div class="flex-column">
+                <p>Company</p>
+                <a href="#">Brand</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Feedback</a>
+                <a href="#">Developers</a>
+            </div>
+            <div class="flex-column">
+                <p>Policies</p>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="flex-column">
+                <p>Resources</p>
+                <a href="#">Community</a>
+                <a href="#">Licenses</a>
+            </div>
+            <div class="flex-column">
+                <p>Social Media</p>
+                <a href="#">Discord</a>
+                <a href="#">Twitch</a>
+                <a href="#">Xbox</a>
+            </div>
+        </div>
+    </footer>
+
+    <dialog id="dialogElement">
+        <div id="mini-loader"></div>
+    </dialog>
+</body>
+</html>
