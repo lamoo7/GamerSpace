@@ -1,0 +1,63 @@
+<div id="body1">
+    <h2 data-type="Step 1"> Type in a game <span>title</span> or <span>genre</span></h2>
+
+    <input type="text" id="search-bar" placeholder="Examples: MOBA, Shooter, Fortnite, Among Us, etc.">
+
+    <div id="step2">
+        <h2 data-type="Step 2" style="margin-top: 5em"> Click on the <span>icons</span> below to select what <span>games</span> you <span>play</span></h2>
+
+        <h6><i class="fa-solid fa-circle-info" style="color: #71c562;"></i>&nbsp;Select at least three <span>games</span> for a better range of connections</h6>
+
+        <form class="grid check-icons">
+        <input type="checkbox" id="League of Legends">
+        <label data-game-type="MOBA" data-game-title="League of Legends" for="League of Legends">
+            <img src="../images/games/League of Legends.png">
+            League of Legends
+        </label>
+
+        <input type="checkbox" id="DOTA">
+        <label data-game-type="MOBA" data-game-title="" for="DOTA">
+            <img src="../images/games/DOTA 2.png">
+            DOTA 2
+        </label>
+
+        <input type="checkbox" id="Counter Strike Global Offensive">
+        <label data-game-type="shooter" data-game-title="Counter Strike Global Offensive" for="Counter Strike Global Offensive">
+            <img src="../images/games/Counter Strike Global Offensive.png">
+            Counter Strike Global Offensive
+        </label>
+
+        <input type="checkbox" id="Fall Guys">
+        <label data-game-type="indie" data-game-title="Fall Guys" for="Fall Guys">
+            <img src="../images/games/Fall Guys.png">
+            Fall Guys
+        </label>
+
+        <input type="checkbox" id="Euro Truck Simulator 2">
+        <label data-game-type="openworld" data-game-title="Euro Truck Simulator 2" for="Euro Truck Simulator 2">
+            <img src="../images/games/Euro Truck Simulator 2.png">
+            Euro Truck Simulator 2
+        </label>
+
+        <input type="checkbox" id="Minecraft">
+        <label data-game-type="openworld" data-game-title="Minecraft" for="Minecraft">
+            <img src="../images/games/Minecraft.png">
+            Minecraft
+        </label>
+
+        <input type="checkbox" id="Speedrunners">
+        <label data-game-type="indie" data-game-title="Speedrunners" for="Speedrunners">
+            <img src="../images/games/Speedrunners.png">
+            Speedrunners
+        </label>
+
+        <input type="checkbox" id="Terraria">
+        <label data-game-type="indie" data-game-title="Terraria" for="Terraria">
+            <img src="../images/games/Terraria.png">
+            Terraria
+        </label>
+
+        <button hx-get="last-steps.html" hx-swap="outerHTML" hx-target="#body1">Continue</button>
+        </form>
+    </div>
+</div>

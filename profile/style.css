@@ -1,0 +1,230 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.flex {
+  display: flex;
+}
+
+body {
+  min-block-size: 100vh;
+  margin: 0;
+  background: repeating-linear-gradient(-45deg, black 1rem, #111 2rem);
+  background-attachment: fixed;
+  color: #dcddde;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: #212121;
+}
+body::-webkit-scrollbar-thumb {
+  background: #71C562;
+}
+
+.menu {
+  width: -moz-min-content;
+  width: min-content;
+  height: 100vh;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
+  z-index: 999;
+}
+.menu .options {
+  height: 3em;
+  aspect-ratio: 1;
+  background-color: #dcddde;
+  color: #111;
+  padding: 1em;
+  margin: 0.25em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.menu .options:hover, .menu .options:focus {
+  background-color: #111;
+  color: #dcddde;
+}
+.menu a.options {
+  margin-top: auto;
+  text-decoration: none;
+}
+.menu a.options:hover, .menu a.options:focus {
+  background-color: #bb1515;
+  color: #dcddde;
+}
+
+.wrapper {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  width: calc(100vw - 10em);
+  margin-inline: auto;
+}
+
+[role=tablist] {
+  position: sticky;
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-bottom: 1px solid hsl(0, 0%, 30%);
+  justify-content: center;
+  margin-inline: auto;
+}
+
+[role=tablist]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  scale: var(--_width, 0.4) 1;
+  translate: var(--_left, 0) 0;
+  transform-origin: left;
+  transition: scale 200ms, translate 200ms;
+  background: #71C562;
+}
+
+[role=tab] {
+  color: #fff;
+  background: lightblue;
+  background: transparent;
+  padding: 1em 2em;
+  border: 0;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+[role=tab]:hover, [role=tab][aria-selected=true] {
+  opacity: 1;
+}
+
+#dialogElement {
+  border: none;
+  outline: none;
+  position: fixed;
+  inset: 0;
+  background-color: transparent;
+  padding: 0;
+}
+
+#dialogElement::backdrop {
+  background-color: rgba(17, 17, 17, 0.6666666667);
+}
+
+#mini-loader {
+  margin: 1em;
+  border-radius: 50%;
+  height: 1.5em;
+  aspect-ratio: 1;
+  border: 3px transparent solid;
+  border-top: 3px #71C562 solid;
+  background: transparent;
+  animation: loader 1s infinite ease;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+    border: 3px transparent solid;
+    border-top: 3px #71C562 solid;
+  }
+  50% {
+    transform: rotate(180deg);
+    border: 3px transparent solid;
+    border-bottom: 3px #71C562 solid;
+  }
+  0% {
+    transform: rotate(360deg);
+    border: 3px transparent solid;
+    border-top: 3px #71C562 solid;
+  }
+}
+#card-wrapper {
+  display: grid;
+  place-items: center;
+  gap: 2em;
+  padding-block-start: 4em;
+  height: 92vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-mask: linear-gradient(transparent, white 10%, white 90%, transparent);
+          mask: linear-gradient(transparent, white 10%, white 90%, transparent);
+}
+#card-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+#card-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+#card-wrapper::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+#card-wrapper .card {
+  scroll-snap-align: center;
+}
+
+#community-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(615px, 1fr));
+  gap: 25px;
+  place-items: center;
+  height: 92vh;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+#community-wrapper::-webkit-scrollbar {
+  width: 0;
+}
+#community-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+#community-wrapper::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.community-card {
+  padding-block: 1em;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0px 1rem 1.5rem rgba(0, 0, 0, 0.5);
+  margin: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  row-gap: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 600px;
+}
+.community-card img {
+  height: 100px;
+  aspect-ratio: 1;
+}
+.community-card div {
+  grid-column: span 2;
+}
+.community-card div h1, .community-card div p {
+  margin: 0;
+}
+.community-card div h1 {
+  color: #2D2747;
+}
+.community-card div p {
+  color: #A0A0A0;
+}
+.community-card i {
+  position: relative;
+  font-size: xx-large;
+  color: #71C562;
+}/*# sourceMappingURL=style.css.map */
