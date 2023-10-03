@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx.org@1.9.4"></script>
 </head>
-<body onload="alert('The HTMX code is not well suited for this kind of feed-scrolling page (like TikTok, YT Shorts, Reels), therefore the movement will be junky. I am working on fixing it')">
+<body onload="alert('The HTMX code is not well suited for this kind of feed-scrolling page (like TikTok, YT Shorts, Reels), therefore the movement will be junky. I am working on fixing it. After scrolling once, wait ~2s, the cards will move as expected after the stutter')">
     
     <div class="flex menu">
         <i class="options fa-solid fa-id-card-clip" hx-get="card/card.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement"></i>
