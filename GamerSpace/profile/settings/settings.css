@@ -1,10 +1,16 @@
 #main-menu-settings {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   color: #dcddde;
   background-color: rgba(0, 0, 0, 0.5647058824);
   padding: 0.5em;
   gap: 0.5em;
+}
+#main-menu-settings i {
+  display: grid;
+  place-items: center;
+  font-size: x-large;
+  margin-right: 20px;
 }
 
 #bg-change .flex div {
@@ -13,6 +19,7 @@
   margin-inline-end: 1.5em;
   background-color: black;
   border-radius: 0.5rem;
+  border: 2px black solid;
 }
 #bg-change .flex div:nth-child(1) {
   background: repeating-linear-gradient(-45deg, black 1rem, #111 2rem);

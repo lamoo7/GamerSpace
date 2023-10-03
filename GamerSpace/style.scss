@@ -10,6 +10,7 @@
 body {
     min-block-size: 100vh;
     margin: 0;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
          width: 0.25rem;
     }
@@ -466,7 +467,7 @@ span { color: #71C562; }
 }
 
 #fifth {
-    height: 70vh;
+    height: 75vh;
     background: url("bg.jpg");
     background-color: #00000040;
     background-blend-mode: multiply;
@@ -482,6 +483,7 @@ span { color: #71C562; }
     align-content: center;
 
     h1 { font-size: 48px; }
+    
     .flex button {
         &:last-child {
             margin-left: 0;

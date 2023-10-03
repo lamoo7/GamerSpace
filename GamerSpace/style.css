@@ -10,6 +10,7 @@
 body {
   min-block-size: 100vh;
   margin: 0;
+  scroll-behavior: smooth;
 }
 body::-webkit-scrollbar {
   width: 0.25rem;
@@ -469,7 +470,7 @@ span {
 }
 
 #fifth {
-  height: 70vh;
+  height: 75vh;
   background: url("bg.jpg");
   background-color: rgba(0, 0, 0, 0.2509803922);
   background-blend-mode: multiply;

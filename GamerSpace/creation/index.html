@@ -7,88 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div id="welcome">
-        <h1>Welcome to <span>Gamerspace</span></h1>
+        <h1 style="--i: 2s">Hi, <span>User</span>!</h1>
+        <h1 style="--i: 4s">Welcome to <span>Gamerspace</span></h1>
     </div>
 
-    <h2 data-type="Step 1"> Type in a game <span>title</span> or <span>genre</span></h2>
-
-    <input type="text" id="search-bar" placeholder="Examples: MOBA, Shooter, Fortnite, Among Us, etc.">
-
-    <h2 data-type="Step 2" style="margin-top: 5em"> Click on the <span>icons</span> below to select what <span>games</span> you <span>play</span></h2>
-    
-    <h6><i class="fa-solid fa-circle-info" style="color: #71c562;"></i>&nbsp;Select at least three <span>games</span> for a better range of connections</h6>
-    
-    <form class="grid check-icons">
-        <input type="checkbox" id="League of Legends">
-        <label for="League of Legends">
-            <img src="../images/games/League of Legends.png">
-            League of Legends
-        </label>
-
-        <input type="checkbox" id="DOTA">
-        <label for="DOTA">
-            <img src="../images/games/DOTA 2.png">
-            DOTA 2
-        </label>
-
-        <input type="checkbox" id="Counter Strike Global Offensive">
-        <label for="Counter Strike Global Offensive">
-            <img src="../images/games/Counter Strike Global Offensive.png">
-            Counter Strike Global Offensive
-        </label>
-
-        <input type="checkbox" id="Fall Guys">
-        <label for="Fall Guys">
-            <img src="../images/games/Fall Guys.png">
-            Fall Guys
-        </label>
-        
-        <input type="checkbox" id="Euro Truck Simulator 2">
-        <label for="Euro Truck Simulator 2">
-            <img src="../images/games/Euro Truck Simulator 2.png">
-            Euro Truck Simulator 2
-        </label>
-
-        <input type="checkbox" id="Minecraft">
-        <label for="Minecraft">
-            <img src="../images/games/Minecraft.png">
-            Minecraft
-        </label>
-        
-        <input type="checkbox" id="Speedrunners">
-        <label for="Speedrunners">
-            <img src="../images/games/Speedrunners.png">
-            Speedrunners
-        </label>
-        
-        <input type="checkbox" id="Terraria">
-        <label for="Terraria">
-            <img src="../images/games/Terraria.png">
-            Terraria
-        </label>
-        
-        <input type="checkbox" id="Terraria">
-        <label for="Terraria">
-            <img src="../images/games/Terraria.png">
-            Terraria
-        </label>
-        
-        <input type="checkbox" id="Minecraft">
-        <label for="Minecraft">
-            <img src="../images/games/Minecraft.png">
-            Minecraft
-        </label>
-        
-        <input type="checkbox" id="Speedrunners">
-        <label for="Speedrunners">
-            <img src="../images/games/Speedrunners.png">
-            Speedrunners
-        </label>
-
-        <input type="submit" value="Continue">
-    </form>
+    <div hx-get="first-steps.html" hx-swap="outerHTML" hx-trigger="load"></div>
 </body>
 </html>

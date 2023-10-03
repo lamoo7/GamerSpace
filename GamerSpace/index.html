@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx.org@1.9.4"></script>
 </head>
-<body>
+<body onload="alert('You can press submit without inserting credentials in the Login and Signup forms. This website has no backend configured, you don`t need to create accounts. Anything you change or type will not be saved or affect the website');">
     <main>
         <header>
             <h1>GamerSpace</h1>
@@ -219,12 +219,12 @@
         <div class="search-container">
             <input type="text" id="search-bar" placeholder="Type here what game you love the most. Example: League of Legends, Counter Strike, Minecraft..."
                 hx-trigger="input delay:1s" hx-put="render/paragraph" hx-target="#paragraph" hx-swap="innerHTML">
-            <div id="suggestions" class="suggestions">
+            <div id="suggestions" class="suggestions flex" style="justify-content: center;">
                 <div id="mini-loader"></div>
             </div>
         </div>    
 
-        <h3>You and other <span>???</span> people play <span id="paragraph">???</span></h3>
+        <!-- <h3>You and other <span>???</span> people play <span id="paragraph">???</span></h3> -->
 
         <h6><i class="fa-solid fa-circle-info" style="color: #71c562;"></i>&nbspDon't see the <span>game</span> you play? Submit it <a href="#">here</a></h6>
     </section>
@@ -251,14 +251,14 @@
     </section>
 
     <section id="fifth">
-        <h1>Ready to start your journey?</h1>
+        <h1><span>Ready</span> to start your <span>journey</span>?</h1>
         <div class="flex">
             <button class="links" id="openLoginButton" hx-get="auth/login/login-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Log In</button>
             <button class="links" id="openSignupButton" hx-get="auth/register/signup-form.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement">Sign Up</button>
         </div>
 
-        <div class="circle">
-            <div class="bar" style="margin-top: 0; --i: 0.125%;"></div>
+        <div class="circle" style="padding-top: -10-px;">
+            <div class="bar" style="--i: 0.125%;"></div>
             <div class="bar" style="--i: 1%;"></div>
             <div class="bar" style="--i: 8%;"></div>
             <div class="bar" style="--i: 15%;"></div>

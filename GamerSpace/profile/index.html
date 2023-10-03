@@ -5,23 +5,367 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile • GamerSpace</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="card/card.css">
+    <link rel="stylesheet" href="card.css">
     <link rel="stylesheet" href="settings/settings.css">
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/c48f0d09a5.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/htmx.org@1.9.4"></script>
 </head>
-<body>
+<body onload="alert('The HTMX code is not well suited for this kind of feed-scrolling page (like TikTok, YT Shorts, Reels), therefore the movement will be junky. I am working on fixing it')">
     
     <div class="flex menu">
-        <i id="search-bar" class="fa-solid fa-magnifying-glass" tabindex="0"></i>
-        <input type="text" id="search-input" placeholder="Type a username...">
-        <i class="fa-solid fa-id-card-clip" hx-get="card/card.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement"></i>
-        <i class="fa-solid fa-gear" hx-get="settings/settings.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement"></i>
+        <i class="options fa-solid fa-id-card-clip" hx-get="card/card.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement"></i>
+        <i class="options fa-solid fa-gear" hx-get="settings/settings.html" onclick="document.getElementById('dialogElement').showModal();" hx-swap="innerHTML" hx-target="#dialogElement"></i>
+        <a class="options" href="../index.html">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </a>
+    </div>
+
+    <div class="wrapper">
+
+        <div role="tablist" aria-labelledby="channel-name">
+            <button id="tab-1" role="tab" aria-controls="tabPanel-1" aria-selected="true" tabindex="0">Find People
+            </button>
+            <button id="tab-2" role="tab" aria-controls="tabPanel-2" aria-selected="false" tabindex="-1">Explore Communities
+            </button>
+        </div>
+
+        <div class="tab-panels">
+
+            <div id="tabPanel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+                <div id="card-wrapper">
+
+                    <div class="card" hx-get="../profile/connections/user2.html" hx-trigger="load" hx-swap="afterend">
+                        <div class="banner" style="background-image: url('../images/backgrounds/background1.jpg');">
+                            <img src="../images/people/person1.jpg">
+                        </div>
+                        <h2 class="name">Sarah488 <i class="fa-regular fa-circle-check"></i></h2>
+                        <div class="title">Minecraft, Terraria and indie games.</div>
+                        <ul>
+                            <li>
+                                <i class="fa-brands fa-steam"></i>
+                                <p>Sarahh970</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-reddit"></i>
+                                <p>SarahOnReddit</p>
+                            </li>
+                            <li>
+                                <i class="fa-brands fa-xbox"></i>
+                                <p>TheNaughtyPirateGamer</p>
+                            </li>                    
+                            <li>
+                                <i class="fa-brands fa-discord"></i>
+                                <p>Sarah</p>
+                            </li>
+                        </ul>
+                    
+                        <div class="flex">
+                            <img src="../images/games/Terraria.png" alt="">
+                            <img src="../images/games/Minecraft.png" alt="">
+                            <img src="../images/games/Fall Guys.png" alt="">
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+      
+            <div id="tabPanel-2" hidden role="tabpanel" tabindex="0" aria-labelledby="tab-2">
+                
+                <div id="community-wrapper">
+
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+                    
+                    <div class="community-card">
+                        <img src="../images/games/League of Legends.png">
+                        <div>
+                            <h1>Lorem Ipsum</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, tempore?</p>
+                        </div>
+                        <i data-desc="2000" class="fa-solid fa-users"></i>
+                        <i data-desc="Best Rating" class="fa-solid fa-star"></i>
+                        <i data-desc="Pro Users Only" class="fa-regular fa-circle-check"></i>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
     <dialog id="dialogElement">
         <div id="mini-loader"></div>
     </dialog>
+
+    
+<script>
+    const tabsContainer = document.querySelector("[role=tablist]");
+  const tabButtons = tabsContainer.querySelectorAll("[role=tab]");
+  const tabPanels = document.querySelectorAll("[role=tabpanel]");
+  
+  tabsContainer.addEventListener("click", (e) => {
+    const clickedTab = e.target.closest("button");
+    const currentTab = tabsContainer.querySelector('[aria-selected="true"]');
+  
+    if (!clickedTab || clickedTab === currentTab) return;
+  
+    switchTab(clickedTab);
+  });
+  
+  tabsContainer.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "ArrowLeft":
+        moveLeft();
+        break;
+      case "ArrowRight":
+        moveRight();
+        break;
+      case "Home":
+        e.preventDefault();
+        switchTab(tabButtons[0]);
+        break;
+      case "End":
+        e.preventDefault();
+        switchTab(tabButtons[tabButtons.length - 1]);
+        break;
+    }
+  });
+  
+  function moveLeft() {
+    const currentTab = document.activeElement;
+  
+    if (!currentTab.previousElementSibling) {
+      tabButtons.item(tabButtons.length - 1).focus();
+    } else {
+      currentTab.previousElementSibling.focus();
+    }
+  }
+  
+  function moveRight() {
+    const currentTab = document.activeElement;
+    if (!currentTab.nextElementSibling) {
+      tabButtons.item(0).focus();
+    } else {
+      currentTab.nextElementSibling.focus();
+    }
+  }
+  
+  function switchTab(newTab) {
+    const oldTab = tabsContainer.querySelector('[aria-selected="true"]');
+    const activePanelId = newTab.getAttribute("aria-controls");
+    const activePanel = tabsContainer.nextElementSibling.querySelector(
+      "#" + CSS.escape(activePanelId)
+    );
+    tabButtons.forEach((button) => {
+      button.setAttribute("aria-selected", false);
+      button.setAttribute("tabindex", "-1");
+    });
+  
+    tabPanels.forEach((panel) => {
+      panel.setAttribute("hidden", true);
+    });
+  
+    activePanel.removeAttribute("hidden", false);
+  
+    newTab.setAttribute("aria-selected", true);
+    newTab.setAttribute("tabindex", "0");
+    newTab.focus();
+    moveIndicator(oldTab, newTab);
+  }
+  
+  // move underline indicator
+  function moveIndicator(oldTab, newTab) {
+    const newTabPosition = oldTab.compareDocumentPosition(newTab);
+    const newTabWidth = newTab.offsetWidth / tabsContainer.offsetWidth;
+    let transitionWidth;
+  
+    // if the new tab is to the right
+    if (newTabPosition === 4) {
+      transitionWidth =
+        newTab.offsetLeft + newTab.offsetWidth - oldTab.offsetLeft;
+    } else {
+      // if the tab is to the left
+      transitionWidth =
+        oldTab.offsetLeft + oldTab.offsetWidth - newTab.offsetLeft;
+      tabsContainer.style.setProperty("--_left", newTab.offsetLeft + "px");
+    }
+  
+    tabsContainer.style.setProperty(
+      "--_width",
+      transitionWidth / tabsContainer.offsetWidth
+    );
+  
+    setTimeout(() => {
+      tabsContainer.style.setProperty("--_left", newTab.offsetLeft + "px");
+      tabsContainer.style.setProperty("--_width", newTabWidth);
+    }, 220);
+  }
+  
+  </script>
 </body>
 </html>
